@@ -4,7 +4,7 @@ image:
   registry: ghcr.io
   repository: essesseff-demo-account/fastapi-demo-app
   pullPolicy: Always
-  tag: 1.0.0-eb4acb8-20260402T014846Z
+  tag: 1.0.0-411b988-20260402T015221Z
 imagePullSecrets:
   - name: ghcr-credentials
 
@@ -109,7 +109,7 @@ env:
   - name: PORT
     value: "8080"
   - name: VERSION
-    value: "1.0.0-eb4acb8-20260402T014846Z"
+    value: "1.0.0-411b988-20260402T015221Z"
 configMap:
   enabled: true
   data:
