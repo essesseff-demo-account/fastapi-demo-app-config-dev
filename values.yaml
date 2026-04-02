@@ -80,8 +80,8 @@ resources:
     cpu: 200m
     memory: 256Mi
   requests:
-    cpu: 50m
-    memory: 64Mi
+    cpu: 100m
+    memory: 128Mi
 
 autoscaling:
   enabled: false
@@ -93,8 +93,8 @@ livenessProbe:
   httpGet:
     path: /health
     port: 8080
-  initialDelaySeconds: 45
-  periodSeconds: 45
+  initialDelaySeconds: 60
+  periodSeconds: 60
 
 readinessProbe:
   httpGet:
