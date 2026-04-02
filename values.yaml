@@ -80,28 +80,28 @@ resources:
     cpu: 200m
     memory: 256Mi
   requests:
-    cpu: 100m
-    memory: 128Mi
+    cpu: 50m
+    memory: 64Mi
 
 autoscaling:
   enabled: false
   minReplicas: 1
-  maxReplicas: 3
+  maxReplicas: 1
   targetCPUUtilizationPercentage: 75
 
 livenessProbe:
   httpGet:
     path: /health
     port: 8080
-  initialDelaySeconds: 10
-  periodSeconds: 10
+  initialDelaySeconds: 45
+  periodSeconds: 45
 
 readinessProbe:
   httpGet:
     path: /ready
     port: 8080
-  initialDelaySeconds: 5
-  periodSeconds: 5
+  initialDelaySeconds: 30
+  periodSeconds: 30
 
 env:
   - name: ENVIRONMENT
